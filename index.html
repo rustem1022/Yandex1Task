@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="utf-8">
+  <title>Achivki</title>
+
+<style>
+.global{}
+.feolet_owl {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 102px;
+	height: 102px;
+	line-height: 94px;
+	text-align: center;
+	background: url(border.png) 0 0 no-repeat;
+           
+}
+.blue_owl {
+	position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    height: 100px;
+    line-height: 94px;
+    text-align: center;
+    background: url(border_b.png) 0 0 no-repeat; 
+}
+
+.feolet_owl .image {
+	vertical-align: middle;
+    display: inline-block;
+	background:  url('owl.png') no-repeat; /* Здесь можно поменять внутреннюю картинку ачивки размером 62х47 */
+	outline: none;
+	height: 47px;
+	width: 62px;
+}
+
+.blue_owl .image {
+	vertical-align: middle;
+    display: inline-block;
+	background: url('blue_owl.png') no-repeat;  /* Здесь можно поменять внутреннюю картинку ачивки размером 62х47 */
+	outline: none;
+	height: 47px;
+	width: 62px;
+}
+
+
+.count {
+	position: absolute;
+	width: 43px;
+	height: 41px;
+	top:61%;
+	left:59%;
+	line-height: 37px;
+	text-align: center;  
+	color: #a091a6;
+  	font-size: 17px;
+  	font-weight: bold;
+    font-family:"Helvetica";	
+}
+.blue_owl .count {display: none;}
+
+</style>
+</head>
+<body>
+	<h1>Меняя класс "veolet_owl" на "blue_owl" меняеться стиль ачивки создано 5 Ачивок, 6-я как пример другого класса!</h1>
+	<div class="global">				
+	   	<div class="feolet_owl">      <!-- для создания новой Ачивки нужно скопировать все что ноходдиться в классе "feolet_owl" с ним включительно -->
+ 		    <div class="image"></div>  
+			<div class="count"></div> 	
+		</div>						  
+		<div class="feolet_owl">
+			<div class="image"></div>
+			<div class="count"></div>
+		</div>
+		<div class="feolet_owl">
+			<div class="image"></div>
+			<div class="count"></div>
+		</div>
+		<div class="feolet_owl">
+			<div class="image"></div>
+			<div class="count"></div>
+		</div>
+		<div class="feolet_owl">
+			<div class="image"></div>
+			<div class="count"></div>
+		</div>
+		<div class="feolet_owl">
+			<div class="image"></div>
+			<div class="count"></div>
+		</div>
+		<div class="blue_owl">		   <!-- Пример Ачивки с class="blue_owl"-->
+			<div class="image"></div>
+			<div class="count"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+	var body   = document.body;
+	var global = body.children[1];
+				
+	for (var i = 0; i <= global.children.length; i++) {                    //счетчик для нумерации ачивок 
+		 if (global.children[i].classList.contains("feolet_owl")) {
+		     global.children[i].children[1].innerHTML = (i+1);
+		 }
+	}
+
+	</script>
+</body>
+</html>
